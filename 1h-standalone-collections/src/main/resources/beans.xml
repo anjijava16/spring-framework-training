@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="com.skbr.EmployeeDirectory">
+<property name="idToNameMap">
+<map>
+<entry key="1" value="amar"></entry>
+<entry key="2" value="akbar"></entry>
+<entry key="3" value="antony"></entry>
+</map>
+</property>
+</bean>
+
+<bean id="amar" class="com.skbr.Employee">
+<property name="emailAddressList">
+<list>
+<value>amar@gmail.com</value>
+<value>amar@hotmail.com</value>
+</list>
+</property>
+</bean>
+</beans>
