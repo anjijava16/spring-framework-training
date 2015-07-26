@@ -5,6 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class StandaloneApplication {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		
 
@@ -14,7 +15,7 @@ public class StandaloneApplication {
 		System.out.println(messageGenerator1.getMessage());
 
 		ApplicationContext applicationContext2 = new ClassPathXmlApplicationContext("beans.xml");
-		MessageGenerator messageGenerator2 = applicationContext2.getBean(MessageGenerator.class);
+		MessageGenerator messageGenerator2 = (MessageGenerator) applicationContext2.getBean("generator");
 
 		System.out.println(messageGenerator2.getMessage());
 
