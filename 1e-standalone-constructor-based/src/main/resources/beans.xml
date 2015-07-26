@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="battery" class="com.skbr.Battery">
+<constructor-arg value="lithiumBattery"></constructor-arg>
+</bean>
+
+<bean id="nokiaBlackMobile" class="com.skbr.Mobile">
+<constructor-arg ref="battery"></constructor-arg>
+<constructor-arg value="nokia"></constructor-arg>
+<constructor-arg value="black"></constructor-arg>
+</bean>
+
+<bean id="samsungRedMobile" class="com.skbr.Mobile">
+<constructor-arg ref="battery"></constructor-arg>
+<constructor-arg type="java.lang.String" value="samsung"></constructor-arg>
+<constructor-arg type="java.lang.String" value="red"></constructor-arg>
+</bean>
+
+<bean id="nokiaRedMobile" class="com.skbr.Mobile">
+<constructor-arg ref="battery"></constructor-arg>
+<constructor-arg index="0" value="nokia"></constructor-arg>
+<constructor-arg index="1" value="red"></constructor-arg>
+</bean>
+
+<bean id="samsungBlackMobile" class="com.skbr.Mobile">
+<constructor-arg ref="battery"></constructor-arg>
+<constructor-arg name="brand" value="samsung"></constructor-arg>
+<constructor-arg name="color" value="black"></constructor-arg>
+</bean>
+
+</beans>
