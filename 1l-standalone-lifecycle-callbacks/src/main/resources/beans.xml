@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Required to process the annotations  -->
+<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+
+
+<bean class="com.skbr.CallbackWithInterface"></bean>
+<bean class="com.skbr.CallbackWithXMLDeclaration" init-method="initialize" destroy-method="cleanup"></bean>
+<bean class="com.skbr.CallbackWithJSR250"></bean>
+<bean class="com.skbr.CallbackWithAllMechanism" init-method="init" destroy-method="cleanup"></bean>
+<bean class="com.skbr.CallbackWithStartStopLifecycle"></bean>
+</beans>
