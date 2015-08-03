@@ -15,6 +15,9 @@ public class StandaloneApplication {
 		System.out.println("Find ross : " + personRepository.findByName("ross"));
 		System.out.println("Find all : " + personRepository.findAll());
 		
+		personRepository.createPerson(new Person("chandler", 36));
+		System.out.println("Find all : " + personRepository.findAll());
+
 		applicationContext.registerShutdownHook();
 	}
 }

@@ -48,4 +48,7 @@ public class PersonRepository {
 				});
 	}
 	
+	public void createPerson(Person person) {
+		jdbcTemplate.update("insert into person (name,age) values (?,?)", person.getName(), person.getAge());
+	}
 }
